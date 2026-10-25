@@ -26,8 +26,9 @@ void initPads()
     padInitializeAny(&pad);
 }
 
-void inputPoller()
+void inputPoller(void* arg)
 {
+    (void)arg;
     do
     {
         padUpdate(&pad);

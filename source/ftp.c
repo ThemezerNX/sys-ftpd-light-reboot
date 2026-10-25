@@ -3742,6 +3742,9 @@ FTP_DECLARE(REB)
 {
     console_print(CYAN "%s %s\n" RESET, __func__, args ? args : "");
 
+    if (!is_session_authenticated(session))
+        return;
+
     /* disconnect from the client */
     ftp_send_response(session, 221, "disconnecting\r\n");
     ftp_session_close_cmd(session);
