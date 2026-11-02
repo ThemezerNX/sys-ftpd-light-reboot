@@ -4,4 +4,5 @@ build
 *.nso
 *.nsp
 *.zip
-out/.DS_Store
+out/
+.DS_Store
